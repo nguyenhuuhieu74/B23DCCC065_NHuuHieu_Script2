@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="item">Calico</p>
+    <p class="item">Tabby</p>
+    <p class="item">Tuxedo</p>
+    <button onclick="updateItem()">Click me</button>
+
+    <script>
+        function updateItem() {
+            const list = document.querySelectorAll('.item');
+            list.forEach(item => {
+                item.textContent = 'Updated item';
+            });
+        }
+    </script>
+</body>
+</html>
