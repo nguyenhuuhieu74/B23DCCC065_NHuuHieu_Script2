@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>First div</div>
+    <div>Second div</div>
+    <div>Third div</div>
+    <p id="display">Number of elements: </p>
+
+    <script>
+        function displayDiv() {
+            const div = document.querySelectorAll('div');
+            const count = div.length;
+
+            const displayElement = document.getElementById('display');
+            displayElement.textContent = `Number of elements: ${count}`;
+        }
+
+        displayDiv();
+    </script>
+</body>
+</html>
