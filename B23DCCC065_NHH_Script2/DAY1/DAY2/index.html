@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="studentForm">
+    <input type="hidden" id="studentId">
+    <label for="name">Họ Tên:</label>
+    <input type="text" id="name" required>
+    
+    <label for="gender">Giới Tính:</label>
+    <select id="gender" required>
+      <option value="Nam">Nam</option>
+      <option value="Nữ">Nữ</option>
+    </select>
+    
+    <label for="dob">Ngày Sinh:</label>
+    <input type="date" id="dob" required>
+    
+    <label for="hometown">Quê Quán:</label>
+    <input type="text" id="hometown" required>
+
+    <button type="submit">Lưu</button>
+  </form>
+
+  <table id="studentTable">
+    <thead>
+      <tr>
+        <th>Mã SV</th>
+        <th>Họ Tên</th>
+        <th>Giới Tính</th>
+        <th>Ngày Sinh</th>
+        <th>Quê Quán</th>
+        <th>Hành Động</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
