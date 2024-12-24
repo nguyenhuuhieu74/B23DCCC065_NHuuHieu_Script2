@@ -1,17 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const todoRoutes = require('./src/routes/todoRoutes.js');
+
 const app = express();
-const port = 3001;
+const port = 3000;
 
-// Import the todos router
-const todosRouter = require('./src/routers/todos');
+app.use(bodyParser.json()); 
+app.use('/api', todoRoutes); 
 
-// Middleware to parse JSON request bodies
-app.use(express.json());
-
-// Use the todos router for requests to /todos
-app.use('/todos', todosRouter);
-
-// Start the server
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });
